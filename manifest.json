@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Jira AI Assistant",
+  "version": "1.0",
+  "description": "AI-powered assistant for Jira ticket creation",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "*://www.google-analytics.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://your-company-jira-url.atlassian.net/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
